@@ -1,0 +1,28 @@
+{
+  "name": "mcp-connections",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server connections for Claude Code",
+  "main": "github-mcp-server.js",
+  "scripts": {
+    "start": "node github-mcp-server.js",
+    "dev": "node github-mcp-server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github",
+    "claude",
+    "ai"
+  ],
+  "author": "shekinahfire77",
+  "license": "MIT"
+}
