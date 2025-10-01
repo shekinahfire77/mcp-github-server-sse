@@ -1006,7 +1006,8 @@ app.get('/sse', (req, res) => {
   sessions.set(sessionId, { res, id: sessionId });
 
   // Send initial endpoint message
-  res.write(`data: {"jsonrpc":"2.0","method":"endpoint","params":{"uri":"http://localhost:${PORT}/sse"}}\n\n`);
+  const baseUrl = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+  res.write(`data: {"jsonrpc":"2.0","method":"endpoint","params":{"uri":"${baseUrl}/sse"}}\n\n`);
 
   // Keep-alive ping every 30 seconds
   const keepAliveInterval = setInterval(() => {
